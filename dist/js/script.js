@@ -1,4 +1,4 @@
-AOS.init();
+
 window.addEventListener("scroll",scrollFunction);
 var gototop = document.getElementsByClassName("gototop");
 window.onload = $(".gototop").css("display","none");
