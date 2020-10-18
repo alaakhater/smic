@@ -61,15 +61,17 @@ input, select, textarea {
   font-family: myfont2;
   src: url(../fonts/Cairo-Regular.ttf); }
 
-body {
-  background-color: #082a40; }
-
 .navbar {
   background-color: #082a40;
   width: 100%;
   position: fixed;
   z-index: 1;
   top: 0; }
+  .navbar .container .navbar-brand {
+    padding-right: 10px;
+    width: 15%; }
+    .navbar .container .navbar-brand img {
+      width: 100%; }
   .navbar .container .navbar-toggler {
     color: inherit;
     border: none; }
@@ -82,7 +84,7 @@ body {
       width: 100%;
       justify-content: space-between; }
       .navbar .container .navbar-collapse .navbar-nav .nav-item {
-        margin: 10px 10px;
+        margin: 10px 0;
         text-align: center;
         font-family: myfont2;
         padding-bottom: 10px; }
@@ -115,6 +117,28 @@ body {
           background-color: inherit;
           color: white; }
 
+@media (max-width: 600px) {
+  .navbar .container .navbar-brand {
+    width: 25%; } }
+
+.backtohome {
+  background-color: white; }
+  .backtohome .container a {
+    display: flex;
+    width: 30%;
+    text-decoration: none;
+    align-items: center; }
+    .backtohome .container a i {
+      font-size: 20px;
+      color: #115989;
+      margin-right: 10px; }
+    .backtohome .container a img {
+      width: 150px;
+      height: auto; }
+
+body {
+  background-color: #082a40; }
+
 header {
   background-image: url("../imgs/02.jpg");
   background-size: cover;
@@ -122,9 +146,8 @@ header {
   header .logo-section {
     display: flex;
     align-items: flex-end;
-    height: 600px;
+    height: 680px;
     width: 100%;
-    padding-bottom: 30px;
     font-family: myfont1; }
     header .logo-section .container img {
       width: 40%;
@@ -249,13 +272,13 @@ header {
   padding-top: 50px;
   background-image: url(../imgs/08.jpg);
   background-size: cover;
-  height: 700px; }
+  height: 900px; }
   .services .mytitle2 {
     font-family: myfont1;
     font-size: 50px;
     text-align: center;
     line-height: 130%;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 30px; }
     .services .mytitle2 a {
       color: white;
@@ -305,10 +328,17 @@ header {
         transform: translate(0, 5px);
         transition: all 0.2s ease-in-out; }
 
+@media (max-width: 450px) {
+  .services .container .mycontainer-cards {
+    display: flex;
+    justify-content: center; }
+    .services .container .mycontainer-cards .mycard {
+      width: 250px; } }
+
 .clients {
   background-image: url(../imgs/09.jpg);
   background-size: cover;
-  height: 700px;
+  height: 850px;
   font-family: myfont1;
   color: white;
   text-align: center;
@@ -377,7 +407,8 @@ header {
     width: 90%;
     margin: auto; }
     .training .row div figure img {
-      width: 100%; }
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 @media (max-width: 660px) {
   .training .title-container .title1 {
@@ -451,10 +482,33 @@ footer {
   footer .copyright {
     font-size: 80%; } }
 
+.aboutus {
+  background-color: white;
+  padding: 10px 0; }
+  .aboutus .abouttitle {
+    background-color: #082a40;
+    padding-left: 20px; }
+    .aboutus .abouttitle h2 {
+      color: white;
+      font-size: 50px;
+      font-family: myfont2;
+      padding: 20px 0; }
+  .aboutus .container .row {
+    padding-top: 20px; }
+    .aboutus .container .row article {
+      font-family: myfont1;
+      color: #082a40;
+      line-height: 150%;
+      font-size: 18px;
+      padding-bottom: 20px; }
+    .aboutus .container .row figure img {
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
 html {
   scroll-behavior: smooth; }
 
-header .gototop {
+.gototop {
   position: fixed;
   z-index: 1;
   bottom: 50px;
@@ -467,10 +521,10 @@ header .gototop {
   display: flex;
   justify-content: center;
   align-items: center; }
-  header .gototop a i {
+  .gototop a i {
     color: white;
     font-size: 35px; }
 
-header .gototop:hover {
+.gototop:hover {
   opacity: 1;
   transition: opacity 0.2s linear; }
